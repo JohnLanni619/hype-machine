@@ -1,8 +1,11 @@
-import "./style.css"
+import "../../index.css"
 const Footer = () => {
     return  (
         <footer>
-       <p>footer</p>
+            <ul className="footer-container">
+                <li>Contact Us</li>
+                <li>Group 5 &copy; 2021</li>
+            </ul>
         </footer>
     );
 };

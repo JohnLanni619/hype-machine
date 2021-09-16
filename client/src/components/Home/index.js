@@ -1,8 +1,8 @@
-import "./style.css"
+import "../../index.css"
 const Home = () => {
     return  (
         <div>
-       <p>home view</p>
+       
         </div>
     );
 };
