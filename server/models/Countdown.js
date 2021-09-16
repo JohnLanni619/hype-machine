@@ -1,4 +1,6 @@
 const { Schema, model } = require('mongoose');
+const commentSchema = require('./Comment');
+const dateFormat = require('../utils/dateFormat');
 
 const countdownSchema = new Schema(
   {
@@ -17,7 +19,7 @@ const countdownSchema = new Schema(
       type: String,
       required: true
     },
-    comments: [commentsSchema]
+    comments: [commentSchema]
   },
   {
     toJSON: {
