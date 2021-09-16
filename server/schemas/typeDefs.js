@@ -1,3 +1,4 @@
+
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
@@ -32,6 +33,7 @@ type Query {
   countdowns(username: String): [countdown]
   countdown(_id: ID!): Countdown
 }
+
 `;
 
 // export the typeDefs

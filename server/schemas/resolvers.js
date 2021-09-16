@@ -1,3 +1,4 @@
+
 const { User, Countdown } = require('../models')
 
 const resolvers = {
@@ -28,5 +29,4 @@ const resolvers = {
 
   }
 }
-
 module.exports = resolvers;
