@@ -1,3 +1,6 @@
-//create variables to require models
+const Countdown = require('./Countdown')
+const User = require('./User')
+const Comment = require('./Comment')
 
-//export models
+
+module.exports = {Countdown, User, Comment}
