@@ -2,6 +2,15 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
+type User {
+  _id: ID
+  username: String
+  email: String
+  friendCount: Int
+  countdowns: [Countdown]
+  friends: [User]
+}
+
 type Countdown {
   _id: ID
   countdownTitle: String
@@ -19,31 +28,16 @@ type Comment {
     username: String
 }
 
-type User {
-  _id: ID
-  username: String
-  email: String
-  friendCount: Int
-  countdowns: [Countdowns]
-  friends: [User]
-}
-type Query {
-  me: User
-  users: [User]
-  user(username: String!): User
-  thoughts(username: String): [Thought]
-  thought(_id: ID!): Thought
-}
-
 type Auth {
   token: ID!
   user: User
 }
 
 type Query {
+  me: User
   users: [User]
   user(username: String!): User
-  countdowns(username: String): [countdown]
+  countdowns(username: String): [Countdown]
   countdown(_id: ID!): Countdown
 }
 
@@ -53,7 +47,6 @@ type Mutation {
   addCountdown(CountdownTitle: String!): Countdown
   addComment(countdownId: ID!, commentText: String!): Countdown
   addFriend(friendId: ID!): User
-  
 }
 
 `;

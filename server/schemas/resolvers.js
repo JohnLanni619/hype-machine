@@ -9,8 +9,6 @@ const resolvers = {
     countdowns: async (parent, { username }) => {
       const params = username ? { username } : {};
       return Countdown.find(params).sort({ createdAt: -1 });
-
-
     },
     countdown: async (parent, { _id }) => {
       return Countdown.findOne({ _id });
@@ -19,32 +17,29 @@ const resolvers = {
       return User.find()
         .select('-__v -password')
         .populate('friends')
-        .populate('countdown');
+        .populate('countdowns');
     },
     // get a user by username
     user: async (parent, { username }) => {
       return User.findOne({ username })
         .select('-__v -password')
         .populate('friends')
-        .populate('countdown');
+        .populate('countdowns');
     },
-    Query: {
-      me: async (parent, args, context) => {
-        if (context.user) {
-          const userData = await User.findOne({ _id: context.user._id })
-            .select('-__v -password')
-            .populate('thoughts')
-            .populate('friends');
+    me: async (parent, args, context) => {
+      if (context.user) {
+        const userData = await User.findOne({ _id: context.user._id })
+          .select('-__v -password')
+          .populate('countdowns')
+          .populate('friends');
 
-          return userData;
-        }
-
-        throw new AuthenticationError('Not logged in');
+        return userData;
       }
-    },
 
-
+      throw new AuthenticationError('Not logged in');
+    }
   },
+  
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
@@ -74,7 +69,7 @@ const resolvers = {
 
         await User.findByIdAndUpdate(
           { _id: context.user._id },
-          { $push: { thoughts: thought._id } },
+          { $push: { countdowns: countdown._id } },
           { new: true }
         );
 
@@ -83,10 +78,10 @@ const resolvers = {
 
       throw new AuthenticationError('You need to be logged in!');
     },
-    addReaction: async (parent, { countdownId, commentText }, context) => {
+    addComment: async (parent, { countdownId, commentText }, context) => {
       if (context.user) {
         const updatedCountdown = await Countdown.findOneAndUpdate(
-          { _id: CountdownId },
+          { _id: countdownId },
           { $push: { comments: { commentText, username: context.user.username } } },
           { new: true, runValidators: true }
         );

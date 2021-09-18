@@ -23,7 +23,7 @@ const userSchema = new Schema(
     countdowns: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Thought'
+        ref: 'Countdown'
       }
     ],
     friends: [
