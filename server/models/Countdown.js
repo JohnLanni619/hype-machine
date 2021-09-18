@@ -13,11 +13,15 @@ const countdownSchema = new Schema(
       default: Date.now,
       get: timestamp => dateFormat(timestamp)
     },
+    targetDate:{
+      type: Date,
+      get: timestamp => dateFormat(timestamp)
+    },
     username: {
       type: String,
       required: true
     },
-    comments: [commentsSchema]
+    comments: [commentSchema]
   },
   {
     toJSON: {
@@ -25,6 +29,10 @@ const countdownSchema = new Schema(
     }
   }
 );
+
+countdownSchema.virtual('commentCount').get(function () {
+  return this.comments.length;
+});
 
 const Countdown = model('Countdown', countdownSchema)
 
