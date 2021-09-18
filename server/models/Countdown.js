@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
-const commentSchema = require('./Comment');
 const dateFormat = require('../utils/dateFormat');
+const commentSchema = require('./Comment');
 
 const countdownSchema = new Schema(
   {
@@ -15,6 +15,10 @@ const countdownSchema = new Schema(
       default: Date.now,
       get: timestamp => dateFormat(timestamp)
     },
+    targetDate:{
+      type: Date,
+      get: timestamp => dateFormat(timestamp)
+    },
     username: {
       type: String,
       required: true
@@ -27,6 +31,10 @@ const countdownSchema = new Schema(
     }
   }
 );
+
+countdownSchema.virtual('commentCount').get(function () {
+  return this.comments.length;
+});
 
 const Countdown = model('Countdown', countdownSchema)
 
