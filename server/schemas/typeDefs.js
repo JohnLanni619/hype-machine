@@ -44,7 +44,7 @@ type Query {
 type Mutation {
   login(email: String!, password: String!): Auth
   addUser(username: String!, email: String!, password: String!): Auth
-  addCountdown(CountdownTitle: String!): Countdown
+  addCountdown(countdownTitle: String!): Countdown
   addComment(countdownId: ID!, commentText: String!): Countdown
   addFriend(friendId: ID!): User
 }
