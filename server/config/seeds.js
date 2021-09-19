@@ -4,9 +4,9 @@ const db = require('../config/connection');
 const { Comment, Countdown, User } = require('../models');
 
 db.once('open', async () => {
-    // await Comment.deleteMany({});
-    // await Countdown.deleteMany({});
-    // await User.deleteMany({});
+    await Comment.remove();
+    await Countdown.remove();
+    await User.remove();
   
     // create user data
     const userData = [];
@@ -39,12 +39,14 @@ db.once('open', async () => {
     // create countdowns
     let createdCountdowns = [];
     for (let i = 0; i < 100; i += 1) {
-      const countdownTitle = faker.lorem.words(Math.round(Math.random() * 10) + 1);
+      const countdownTitle = faker.lorem.words(5);
+      const targetDate = faker.date.future();
+      const createdAt = faker.date.recent();
   
       const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
       const { username, _id: userId } = createdUsers.ops[randomUserIndex];
   
-      const createdCountdown = await Countdown.create({ countdownTitle, username });
+      const createdCountdown = await Countdown.create({ countdownTitle, username, targetDate, createdAt });
   
       const updatedUser = await User.updateOne(
         { _id: userId },

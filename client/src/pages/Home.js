@@ -16,7 +16,7 @@ const Home = () => {
                     {loading ? (
                         <div>Loading...</div>
                     ) : (
-                        <CountdownList countdowns={countdowns} title="Some Feed for Thought(s)..." />
+                        <CountdownList countdowns={countdowns} title="Bring on the hype!" />
                     )}
                 </div>
             </div>

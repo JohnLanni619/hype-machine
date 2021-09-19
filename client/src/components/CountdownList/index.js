@@ -7,16 +7,16 @@ const CountdownList = ({ countdowns, title }) => {
 
     return (
         <div>
-            <h3>{title}</h3>
+            <h3 className="home-title">{title}</h3>
             {countdowns &&
                 countdowns.map(countdown => (
-                    <div key={countdown._id}>
-                        <p>
-                            {countdown.username}
-                            countdown on {countdown.createdAt}
-                        </p>
-                        <div>
-                            <p>{countdown.countdownTitle}</p>
+                    <div className="card" key={countdown._id}>
+                        <div className="container">
+                            <p><b>{countdown.countdownTitle}</b></p> 
+                            <p>Target date: {countdown.targetDate}</p>
+                            <p>
+                                Created by {countdown.username} on {countdown.createdAt}
+                            </p>
                             <p>
                                 Comments: {countdown.commentCount} || Click to{' '}
                                 {countdown.commentCount ? 'see' : 'start'} the discussion!
