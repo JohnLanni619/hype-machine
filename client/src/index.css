@@ -41,6 +41,30 @@ nav {
 
 .nav-item {
   margin-right: 100px;
+  position: relative;
+}
+
+.nav-item,
+.nav-item:after,
+.nav-item:before {
+  transition: all .5s;
+}
+
+.nav-item:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+.nav-item:hover:after {
+  width: 100%;
 }
 
 /* Styling for home page */
