@@ -20,9 +20,14 @@ header {
   background: rgb(78, 78, 100); 
 }
 
+nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   list-style: none;
 }
