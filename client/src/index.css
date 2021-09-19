@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 100px;
+  padding-bottom: 80px;
 }
 
 code {
@@ -13,16 +15,26 @@ code {
 }
 
 header {
-  position: fixed; 
-  width: 100%; 
-  /* Height of the footer*/  
-  height: 60px; 
-  background: rgb(78, 78, 100); 
+  width: 100%;
+  position: fixed;
+  background-color: #05386b;
+  color: white;
+  padding: 10px 5px;
+  top: 0;
+}
+
+nav h1 {
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   list-style: none;
 }
@@ -31,14 +43,38 @@ header {
   margin-right: 100px;
 }
 
+/* Styling for home page */
+.home-title {
+  padding: 0px 5px;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 0px 5px;
+  width: 50%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  margin-bottom: 10px;
+  background-color: #5cdb95;
+}
+
 footer {
   position: fixed; 
   padding: 10px 10px 0px 10px; 
   bottom: 0;
   width: 100%; 
-  /* Height of the footer*/  
   height: 60px; 
-  background: rgb(78, 78, 100); 
+  background: #05386b; 
+  color: white;
 }
 
 footer:hover {
@@ -47,6 +83,6 @@ footer:hover {
 
 .footer-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   list-style: none;
 }
