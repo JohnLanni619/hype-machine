@@ -18,3 +18,22 @@ export const QUERY_COUNTDOWNS = gql `
         }
     }
 `
+
+export const QUERY_COUNTDOWN = gql `
+    query countdown($id: ID!) {
+        countdown(_id: $id) {
+            _id
+            countdownTitle
+            createdAt
+            username
+            targetDate
+            commentCount
+            comments {
+                _id
+                commentText
+                createdAt
+                username
+            }
+        }
+    }
+`

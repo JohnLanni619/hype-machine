@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CountdownList = ({ countdowns, title }) => {
     if (!countdowns.length) {
@@ -15,11 +16,22 @@ const CountdownList = ({ countdowns, title }) => {
                             <p><b>{countdown.countdownTitle}</b></p> 
                             <p>Target date: {countdown.targetDate}</p>
                             <p>
-                                Created by {countdown.username} on {countdown.createdAt}
+                                Created by <Link
+                                    to={`/profile/${countdown.username}`}
+                                    style={{ fontWeight: 700 }}
+                                    className="text-light"
+                                >
+                                {countdown.username}
+                                </Link>{' '}
+                                on {countdown.createdAt} 
                             </p>
                             <p>
-                                Comments: {countdown.commentCount} || Click to{' '}
+                                Comments: {countdown.commentCount} || 
+                                <Link
+                                    to={`/countdown/${countdown._id}`}
+                                    > Click to{' '}
                                 {countdown.commentCount ? 'see' : 'start'} the discussion!
+                                </Link>
                             </p>
                         </div>
                     </div>
