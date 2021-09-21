@@ -12,7 +12,7 @@ const CountdownList = ({ countdowns, title }) => {
             {countdowns &&
                 countdowns.map(countdown => (
                     <div className="card" key={countdown._id}>
-                        <div className="container">
+                        <div className="container countdown-container">
                             <p><b>{countdown.countdownTitle}</b></p> 
                             <p>Target date: {countdown.targetDate}</p>
                             <p>

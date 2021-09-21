@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding-top: 100px;
   padding-bottom: 80px;
+  background-color: #edf5e1;
 }
 
 code {
@@ -88,7 +89,30 @@ nav {
 .container {
   padding: 2px 16px;
   margin-bottom: 10px;
+}
+
+b {
+  color: #05386b;
+  font-weight: 1000;
+}
+
+.container a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+}
+
+.container a:hover {
+  background-color: #edf5e1;
+  border-radius: 5px;
+}
+
+.countdown-container {
   background-color: #5cdb95;
+}
+
+.comment-container {
+  background-color: #8ee4af;
 }
 
 footer {

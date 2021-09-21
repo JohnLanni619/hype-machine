@@ -59,6 +59,7 @@ db.once('open', async () => {
     // create comments
     for (let i = 0; i < 100; i += 1) {
       const commentText = faker.lorem.words(Math.round(Math.random() * 20) + 1);
+      const createdAt = faker.date.recent();
   
       const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
       const { username } = createdUsers.ops[randomUserIndex];
@@ -68,7 +69,7 @@ db.once('open', async () => {
   
       await Countdown.updateOne(
         { _id: countdownId },
-        { $push: { comments: { commentText, username } } },
+        { $push: { comments: { commentText, username, createdAt } } },
         { runValidators: true }
       );
     }

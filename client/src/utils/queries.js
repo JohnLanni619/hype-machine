@@ -36,4 +36,27 @@ export const QUERY_COUNTDOWN = gql `
             }
         }
     }
+`;
+
+export const QUERY_USER = gql `
+    query user($username: String!) {
+        user(username: $username) {
+            _id
+            username
+            email
+            friendCount
+            friends {
+                _id
+                username
+            }
+            countdowns {
+                _id
+                countdownTitle
+                createdAt
+                username
+                targetDate
+                commentCount
+            }
+        }
+    }
 `
