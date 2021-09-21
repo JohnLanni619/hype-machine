@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const CountdownList = ({ countdowns, title }) => {
     if (!countdowns.length) {
-        return <h3>No Countdowns Yet</h3>;
+        return <h3 className="no-countdowns">No Countdowns Yet</h3>;
     }
 
     return (
