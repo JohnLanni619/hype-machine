@@ -1,3 +1,7 @@
+html {
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -31,7 +35,6 @@ nav h1 {
 
 nav {
   display: flex;
-  justify-content: space-between;
 }
 
 .nav-container {
@@ -41,8 +44,9 @@ nav {
 }
 
 .nav-item {
-  margin-right: 100px;
+  margin-right: 100px ;
   position: relative;
+  cursor: pointer;
 }
 
 .nav-item,
@@ -69,8 +73,14 @@ nav {
 }
 
 /* Styling for home page */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .home-title {
   padding: 0px 5px;
+  text-align: center;
 }
 .card {
   /* Add shadows to create the "card" effect */
@@ -115,6 +125,10 @@ b {
   background-color: #8ee4af;
 }
 
+.profile-name {
+  text-align: center;
+}
+
 footer {
   position: fixed; 
   padding: 10px 10px 0px 10px; 
@@ -124,11 +138,10 @@ footer {
   background: #05386b; 
   color: white;
 }
-
-footer:hover {
-  opacity: 1;
+footer a {
+  text-decoration: none;
+  color: white;
 }
-
 .footer-container {
   display: flex;
   justify-content: space-around;
