@@ -60,3 +60,31 @@ export const QUERY_USER = gql `
         }
     }
 `
+
+export const QUERY_ME = gql `
+    {
+        me {
+            _id
+            username
+            email
+            friendCount
+            countdowns {
+                _id
+                countdownTitle
+                createdAt
+                targetDate
+                commentCount
+                comments {
+                    _id
+                    commentText
+                    createdAt
+                    username
+                }
+            }
+            friends {
+                _id
+                username
+            }
+        }
+    }
+`;

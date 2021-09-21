@@ -24,29 +24,34 @@ header {
   position: fixed;
   background-color: #05386b;
   color: white;
-  padding: 10px 5px;
   top: 0;
 }
 
-nav h1 {
+header h1 {
   color: white;
   text-decoration: none;
+  text-align: center;
+  height: 30px;
 }
 
 nav {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   list-style: none;
+  margin-bottom: 10px;
 }
 
 .nav-item {
-  margin-right: 100px ;
   position: relative;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 .nav-item,
@@ -88,6 +93,8 @@ nav {
   transition: 0.3s;
   padding: 0px 5px;
   width: 50%;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -99,6 +106,7 @@ nav {
 .container {
   padding: 2px 16px;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 b {
@@ -121,6 +129,10 @@ b {
   background-color: #5cdb95;
 }
 
+.countdown-card {
+  margin-top: 50px;
+}
+
 .comment-container {
   background-color: #8ee4af;
 }
@@ -130,6 +142,7 @@ b {
 .login-container {
   background-color: #5cdb95;
   width: 40%;
+  margin-top: 20px;
 }
 
 .login-container h2 {
@@ -146,6 +159,13 @@ b {
   height: 50px;
   width: 50%;
   margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #05386b;
+  color: white;
 }
 
 .profile-name {

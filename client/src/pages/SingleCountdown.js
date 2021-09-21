@@ -17,7 +17,7 @@ const SingleCountdown = () => {
     }
 
     return (
-        <div className="card-container">
+        <div className="card-container countdown-card">
             <div className="card" key={countdown._id}>
                 <div className="container countdown-container">
                     <p><b>{countdown.countdownTitle}</b></p> 
