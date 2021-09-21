@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router-dom";
 import { QUERY_COUNTDOWN } from "../utils/queries";
+import CommentList from "../components/CommentList";
 
 const SingleCountdown = () => {
     const { id: countdownId } = useParams();
@@ -16,18 +17,20 @@ const SingleCountdown = () => {
     }
 
     return (
-        <div className="card" key={countdown._id}>
-            <div className="container">
-                <p><b>{countdown.countdownTitle}</b></p> 
-                    <p>Target date: {countdown.targetDate}</p>
-                    <p>
-                        Created by {countdown.username} on {countdown.createdAt}
-                    </p>
-                    <p>
-                        Comments: {countdown.commentCount} || Click to{' '}
-                        {countdown.commentCount ? 'see' : 'start'} the discussion!
-                    </p>
+        <div>
+            <div className="card" key={countdown._id}>
+                <div className="container countdown-container">
+                    <p><b>{countdown.countdownTitle}</b></p> 
+                        <p>Target date: {countdown.targetDate}</p>
+                        <p>
+                            Created by 
+                            <Link
+                                to={`/profile/${countdown.username}`}
+                                > {countdown.username} </Link> on {countdown.createdAt}
+                        </p>
+                </div>
             </div>
+            {countdown.commentCount > 0 && <CommentList comments={countdown.comments} />}
         </div>
     );
 };
