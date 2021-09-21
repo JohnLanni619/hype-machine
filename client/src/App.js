@@ -11,6 +11,7 @@ import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import SingleCountdown from './pages/SingleCountdown';
 import NoMatch from './pages/NoMatch';
+import Contact from './pages/Contact'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -33,6 +34,7 @@ function App() {
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile/:username?" component={Profile} />
             <Route exact path="/countdown/:id" component={SingleCountdown} />
+            <Route exact path="/contact" component={Contact} />
 
             <Route component={NoMatch}/>
           </Switch>
