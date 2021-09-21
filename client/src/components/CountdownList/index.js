@@ -9,6 +9,7 @@ const CountdownList = ({ countdowns, title }) => {
     return (
         <div>
             <h3 className="home-title">{title}</h3>
+            <div className="card-container">
             {countdowns &&
                 countdowns.map(countdown => (
                     <div className="card" key={countdown._id}>
@@ -36,6 +37,7 @@ const CountdownList = ({ countdowns, title }) => {
                         </div>
                     </div>
                 ))}
+        </div>
         </div>
     );
 };

@@ -19,8 +19,8 @@ const Profile = () => {
     return (
         <div>
             <div>
-                <h2>
-                    Viewing {user.username}'s Profile.
+                <h2 className="profile-name">
+                    {user.username}
                 </h2>
             </div>
 

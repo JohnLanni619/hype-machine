@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/JohnLanni619/habit-tracker#readme",
   "dependencies": {
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "react-icons": "^4.2.0"
   },
   "devDependencies": {
     "concurrently": "^6.2.1"
