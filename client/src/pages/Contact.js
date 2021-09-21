@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import { validateEmail } from '../utils/helpers';
 
 function ContactForm() {
@@ -58,7 +58,6 @@ function ContactForm() {
           </div>
         )}
         <button data-testid="button" type="submit">Submit</button>
-        <Link to="/signup"><button type="button">Sign-up</button></Link>
       </form>
     </section>
   );
