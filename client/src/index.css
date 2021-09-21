@@ -117,12 +117,35 @@ b {
   border-radius: 5px;
 }
 
-.countdown-container {
+.countdown-container, .login-container {
   background-color: #5cdb95;
 }
 
 .comment-container {
   background-color: #8ee4af;
+}
+
+/* Login page styling */
+
+.login-container {
+  background-color: #5cdb95;
+  width: 40%;
+}
+
+.login-container h2 {
+  text-align: center;
+}
+
+.login-container input {
+  width: 98%;
+  height: 30px;
+  margin: 10px 0px;
+}
+
+.login-container button {
+  height: 50px;
+  width: 50%;
+  margin-bottom: 10px;
 }
 
 .profile-name {
