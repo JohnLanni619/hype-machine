@@ -12,6 +12,7 @@ body {
   padding-top: 100px;
   padding-bottom: 80px;
   background-color: #edf5e1;
+  
 }
 
 code {
@@ -137,22 +138,25 @@ b {
   background-color: #8ee4af;
 }
 
-/* Login page styling */
+/* Login page/contact page styling */
 
-.login-container {
+.login-container, .contact-container {
   background-color: #5cdb95;
-  width: 40%;
   margin-top: 20px;
 }
 
-.login-container h2 {
+.login-container h2, .contact-container h2 {
   text-align: center;
 }
 
-.login-container input {
+.login-container input, .contact-container input, .contact-container textarea {
   width: 98%;
   height: 30px;
   margin: 10px 0px;
+}
+
+.contact-container textarea {
+  height: 50px;
 }
 
 .login-container button {
@@ -163,7 +167,15 @@ b {
   cursor: pointer;
 }
 
-.login-container button:hover {
+.contact-container button {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.login-container button:hover, .contact-container button:hover {
   background-color: #05386b;
   color: white;
 }
@@ -190,4 +202,15 @@ footer a {
   display: flex;
   justify-content: space-around;
   list-style: none;
+}
+
+svg {
+  color: #F73718;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 75%;
+  }
 }
