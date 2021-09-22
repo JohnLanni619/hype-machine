@@ -19,7 +19,7 @@ const CountdownList = ({ countdowns, title }) => {
                                     {countdown.countdownTitle}
                                 </Link>
                             </b></p> 
-                            <p>Target date: {countdown.targetDate}</p>
+                            {/* <p>Target date: {countdown.targetDate}</p> */}
                             <p>
                                 Created by <Link
                                     to={`/profile/${countdown.username}`}

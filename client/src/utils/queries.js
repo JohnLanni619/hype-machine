@@ -70,6 +70,7 @@ export const QUERY_ME = gql `
             friendCount
             countdowns {
                 _id
+                username
                 countdownTitle
                 createdAt
                 targetDate
