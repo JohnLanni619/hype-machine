@@ -132,6 +132,12 @@ nav {
   border-radius: 5px;
 }
 
+.countdown-title {
+  background-color: #05386b;
+  width: 100%;
+  border-radius: 5px;
+}
+
 
 .countdown-container, .login-container {
   background-color: #5cdb95;
