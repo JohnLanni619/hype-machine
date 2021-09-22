@@ -7,7 +7,6 @@ const Home = () => {
     // use useQuery hook to make query request
     const { loading, data } = useQuery(QUERY_COUNTDOWNS);
     const countdowns = data?.countdowns || [];
-    console.log(countdowns);
 
     return  (
         <main>

@@ -4,6 +4,7 @@ import { QUERY_COUNTDOWN } from "../utils/queries";
 import CommentList from "../components/CommentList";
 import CommentForm from "../components/CommentForm";
 import auth from '../utils/auth';
+import Countdown from 'react-countdown';
 
 const SingleCountdown = () => {
     const { id: countdownId } = useParams();
@@ -18,12 +19,16 @@ const SingleCountdown = () => {
         return <div>Loading...</div>
     }
 
+    const timeRemaining = countdown.targetDate;
+    var integer = parseInt(timeRemaining, 10);
+
+
     return (
         <div className="card-container countdown-card">
             <div className="card" key={countdown._id}>
                 <div className="container countdown-container">
                     <p><b>{countdown.countdownTitle}</b></p> 
-                        <p>Target date: {countdown.targetDate}</p>
+                        Countdown: <Countdown date={integer} />
                         <p>
                             Created by 
                             <Link
