@@ -110,21 +110,28 @@ nav {
   border-radius: 10px;
 }
 
-b {
-  color: #05386b;
-  font-weight: 1000;
+.container {
+  text-align: center;
+  font-size: large;
 }
-
 .container a {
   text-decoration: none;
   color: inherit;
   font-weight: 700;
 }
 
-.container a:hover {
-  background-color: #edf5e1;
+.container b {
+  color: white;
+  font-weight: 1000;
+  font-size: 30px;
+}
+
+.card-title {
+  background-color: #05386b;
+  width: 100%;
   border-radius: 5px;
 }
+
 
 .countdown-container, .login-container {
   background-color: #5cdb95;
@@ -188,6 +195,17 @@ b {
   text-align: center;
 }
 
+.countdown-title b {
+  text-align: center;
+  font-size: 30px;
+}
+
+.countdown-timer {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
 .user-form {
   display: flex;
   justify-content: center;
@@ -226,7 +244,7 @@ b {
 
 footer {
   position: fixed; 
-  padding: 10px 10px 0px 10px; 
+  /* padding: 10px 10px 0px 10px;  */
   bottom: 0;
   width: 100%; 
   height: 60px; 
@@ -253,4 +271,8 @@ svg {
   .card {
     width: 75%;
   }
+  .card-container {
+    text-align: center;
+  }
+
 }

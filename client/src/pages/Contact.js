@@ -42,16 +42,16 @@ function ContactForm() {
         <h2 data-testid="h1tag">Contact Us</h2>
         <form id="contact-form" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="name">Name:</label>
-            <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
+            {/* <label htmlFor="name">Name:</label> */}
+            <input type="text" placeholder="Name" name="name" defaultValue={name} onBlur={handleChange} />
           </div>
           <div>
-            <label htmlFor="email">Email address:</label>
-            <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
+            {/* <label htmlFor="email">Email address:</label> */}
+            <input type="email" placeholder="youremail@test.com" name="email" defaultValue={email} onBlur={handleChange} />
           </div>
           <div>
-            <label htmlFor="message">Message:</label>
-            <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
+            {/* <label htmlFor="message">Message:</label> */}
+            <textarea name="message" placeholder="Message" rows="5" defaultValue={message} onBlur={handleChange} />
           </div>
           {errorMessage && (
             <div>
