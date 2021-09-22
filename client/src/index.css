@@ -272,6 +272,23 @@ svg {
   color: #F73718;
 }
 
+button {
+  background-color: #4CAF50; /* Green */
+ border: none;
+ color: white;
+ padding: 15px 32px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.user-form button {
+  color: black;
+  padding-bottom: 30px;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 768px) {
   .card {
