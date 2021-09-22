@@ -167,6 +167,10 @@ b {
   cursor: pointer;
 }
 
+.sign-up button {
+  width: 100%;
+}
+
 .contact-container button {
   height: 50px;
   width: 100%;
