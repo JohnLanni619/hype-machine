@@ -35,7 +35,7 @@ const CommentForm = ({ countdownId }) => {
                 <p value={characterCount}>
                     Character Count: {characterCount}/300
                 </p>
-                <form classname="user-form" onSubmit={handleFormSubmit}>
+                <form className="user-form" onSubmit={handleFormSubmit}>
                     <textarea
                         value={commentText}
                         placeholder="Leave some hype for this countdown!"
