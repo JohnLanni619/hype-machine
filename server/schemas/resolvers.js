@@ -103,6 +103,19 @@ const resolvers = {
       }
 
       throw new AuthenticationError('You need to be logged in!');
+    },
+
+    deleteCountdown: async (parent, { countdownId }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: {countdowns: countdownId } }
+        ).populate('countdowns');
+
+        return updatedUser;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
     }
 
   }

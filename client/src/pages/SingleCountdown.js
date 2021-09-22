@@ -2,6 +2,8 @@ import { useQuery } from "@apollo/client";
 import { Link, useParams } from "react-router-dom";
 import { QUERY_COUNTDOWN } from "../utils/queries";
 import CommentList from "../components/CommentList";
+import CommentForm from "../components/CommentForm";
+import auth from '../utils/auth';
 
 const SingleCountdown = () => {
     const { id: countdownId } = useParams();
@@ -30,7 +32,10 @@ const SingleCountdown = () => {
                         </p>
                 </div>
             </div>
+            
             {countdown.commentCount > 0 && <CommentList comments={countdown.comments} />}
+            {auth.loggedIn() && <CommentForm countdownId={countdown._id} />}
+            
         </div>
     );
 };

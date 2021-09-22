@@ -44,11 +44,11 @@ type Query {
 type Mutation {
   login(email: String!, password: String!): Auth
   addUser(username: String!, email: String!, password: String!): Auth
-  addCountdown(countdownTitle: String!): Countdown
+  addCountdown(countdownTitle: String!, targetDate: String!): Countdown
   addComment(countdownId: ID!, commentText: String!): Countdown
   addFriend(friendId: ID!): User
+  deleteCountdown(countdownId: ID!): User
 }
-
 `;
 
 // export the typeDefs

@@ -184,6 +184,36 @@ b {
   text-align: center;
 }
 
+.user-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-form input, .user-form button {
+  width: 25%;
+  height: 30px;
+  text-align: center;
+  margin-top: 10px;
+  
+}
+
+.user-form button:hover {
+  cursor: pointer;
+  background-color: #05386b;
+  color: white;
+  border-radius: 10px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 footer {
   position: fixed; 
   padding: 10px 10px 0px 10px; 

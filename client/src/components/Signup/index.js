@@ -1,4 +1,5 @@
 import "../../index.css"
+
 const Signup = () => {
     return  (
         <div>
