@@ -30,21 +30,23 @@ const CommentForm = ({ countdownId }) => {
     };
 
     return (
-        <div className="comment-form">
-            <p value={characterCount}>
-                Character Count: {characterCount}/300
-            </p>
-            <form classname="user-form" onSubmit={handleFormSubmit}>
-                <textarea
-                    value={commentText}
-                    placeholder="Leave some hype for this countdown!"
-                    onChange={handleChange}
-                ></textarea>
+        <div className="card-container comment-form">
+            <div className="card login-container">
+                <p value={characterCount}>
+                    Character Count: {characterCount}/300
+                </p>
+                <form classname="user-form" onSubmit={handleFormSubmit}>
+                    <textarea
+                        value={commentText}
+                        placeholder="Leave some hype for this countdown!"
+                        onChange={handleChange}
+                    ></textarea>
 
-                <button type="submit">
-                    submit
-                </button>
-            </form>
+                    <button type="submit">
+                        submit
+                    </button>
+                </form>
+            </div>
         </div>
     );
 };
