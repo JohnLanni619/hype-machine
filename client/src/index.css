@@ -167,6 +167,10 @@ b {
   cursor: pointer;
 }
 
+.sign-up button {
+  width: 100%;
+}
+
 .contact-container button {
   height: 50px;
   width: 100%;
@@ -208,10 +212,16 @@ b {
 
 .comment-form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
+  text-align: center;
+}
+
+.comment-form textarea {
+  width: 95%;
+  height: 50px;
 }
 
 footer {

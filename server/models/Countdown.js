@@ -16,8 +16,8 @@ const countdownSchema = new Schema(
       get: timestamp => dateFormat(timestamp)
     },
     targetDate:{
-      type: Date,
-      get: timestamp => dateFormat(timestamp)
+      type: Date
+      // get: timestamp => dateFormat(timestamp)
     },
     username: {
       type: String,
