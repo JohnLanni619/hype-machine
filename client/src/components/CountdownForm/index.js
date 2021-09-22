@@ -7,13 +7,18 @@ const CountdownForm = () => {
     const [formState, setFormState] = useState({ countdownTitle: '', targetDate: ''});
     const [addCountdown, { error }] = useMutation(ADD_COUNTDOWN, {
         update(cache, { data: { addCountdown } }) {
-            const { countdowns } = cache.readQuery({ query: QUERY_COUNTDOWNS });
+            try {
+                const { countdowns } = cache.readQuery({ query: QUERY_COUNTDOWNS });
 
-            cache.writeQuery({
-                query: QUERY_COUNTDOWNS,
-                data: { countdowns: [addCountdown, ...countdowns] }
-            });
+                cache.writeQuery({
+                    query: QUERY_COUNTDOWNS,
+                    data: { countdowns: [addCountdown, ...countdowns] }
+                });
 
+            } catch (e) {
+                console.error(e);
+            }
+            
             const {me} = cache.readQuery({ query: QUERY_ME });
             cache.writeQuery({
                 query: QUERY_ME,
