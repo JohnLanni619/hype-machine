@@ -31,7 +31,7 @@ const CountdownList = ({ countdowns, title }) => {
                                 on {countdown.createdAt} 
                             </p>
                             <p>
-                                Comments: {countdown.commentCount} || 
+                                Comments: {countdown.commentCount} ||  
                                 <Link
                                     to={`/countdown/${countdown._id}`}
                                     > Click to{' '}
