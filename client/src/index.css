@@ -130,6 +130,7 @@ nav {
   background-color: #05386b;
   width: 100%;
   border-radius: 5px;
+  /* border: solid white 2px; */
 }
 
 .countdown-title {
@@ -282,6 +283,7 @@ button {
  display: inline-block;
   font-size: 16px;
   border-radius: 10px;
+  border: solid black 2px;
 }
 
 .user-form button {
