@@ -14,7 +14,7 @@ const CountdownList = ({ countdowns, title }) => {
                 countdowns.map(countdown => (
                     <div className="card" key={countdown._id}>
                         <div className="container countdown-container">
-                            <p><b>
+                            <p className="card-title"><b>
                             <Link to={`/countdown/${countdown._id}`}>
                                     {countdown.countdownTitle}
                                 </Link>

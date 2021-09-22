@@ -27,8 +27,10 @@ const SingleCountdown = () => {
         <div className="card-container countdown-card">
             <div className="card" key={countdown._id}>
                 <div className="container countdown-container">
-                    <p><b>{countdown.countdownTitle}</b></p> 
-                        Countdown: <Countdown date={integer} />
+                    <p className="countdown-title"><b>{countdown.countdownTitle}</b></p> 
+                        <p className="countdown-timer">
+                            Countdown: <Countdown date={integer} />
+                        </p>
                         <p>
                             Created by 
                             <Link
