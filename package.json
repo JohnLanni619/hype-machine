@@ -1,5 +1,5 @@
 {
-  "name": "habit-tracker",
+  "name": "hype-machine",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -9,19 +9,19 @@
     "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "heroku-postbuild": "cd client && npm run build"
+    "build": "npm run install && cd client && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JohnLanni619/habit-tracker.git"
+    "url": "git+https://github.com/JohnLanni619/hype-machine.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JohnLanni619/habit-tracker/issues"
+    "url": "https://github.com/JohnLanni619/hype-machine/issues"
   },
-  "homepage": "https://github.com/JohnLanni619/habit-tracker#readme",
+  "homepage": "https://github.com/JohnLanni619/hype-machine#readme",
   "dependencies": {
     "if-env": "^1.0.4",
     "react-icons": "^4.2.0"
