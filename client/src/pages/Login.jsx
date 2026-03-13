@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { LOGIN } from '../utils/mutations';
+import { LOGIN } from '../utils/mutations.js';
 import Auth from '../utils/auth.js';
 import { Link } from 'react-router-dom';
 
